@@ -32,6 +32,10 @@ body{
     transition: .2s;
 }
 
+h2.titulo {
+    font-size: 38px;
+}
+
 /* ESTILO DO CABEÇALHO */
 
 header {
@@ -91,7 +95,7 @@ section.topo-do-site .flex{
 }
 
 .topo-do-site .txt-topo-site h1 span{
-    color: gray;
+    color: red;
 }
 
 .topo-do-site .txt-topo-site p{
@@ -116,6 +120,37 @@ section.topo-do-site .flex{
     transform: scale(1.1);
 }
 
+@keyframes writer {
+    0%{ content: ""; }
+    1%{ content: "DEV BACKEND"; }
+    49%{ content: "";}
+    50%{ content: "ENGENHEIRO DE SOFTWARE";}
+    75%{ content: "UX / UI DESIGNER"; }
+    100%{ content: "UX / UI DESIGNER";}
+}
+
+.topo-do-site .txt-topo-site h1 span::before{
+    content: "";
+    animation: writer 10s linear infinite;
+}
+
+@keyframes blink{
+    0% { opacity: 0;}
+    100% { opacity: 1; }
+}
+
+.topo-do-site .txt-topo-site h1 span::after{
+    content: "|";
+    color: #fff;
+    animation: blink infinite alternate 0.3s;
+}
+
+.topo-do-site .txt-topo-site #typing-effect{
+    font-size: 24px;
+}
+
+/* BLOCO DE HARDSKILLS */
+
 .hardskills .interface h2{
     text-align: center;
     color: #fff;
@@ -129,10 +164,131 @@ section.topo-do-site .flex{
     justify-content: space-between;
 }
 
+.hardskills .hardskills-box h3{
+    font-size: 28px;
+    margin: 15px 0px;
+}
+
+section.hardskills {
+    padding: 40px 4%;
+}
+
+section.hardskills .flex{
+    gap: 60px;
+}
+
 .hardskills .hardskills-box{
+    color: #fff;
+    padding: 50px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    margin-top: 40px;
+}
+
+.hardskills .hardskills-box ul{
+    list-style-type: none;
+}
+
+.hardskills .hardskills-box li{
+    margin: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+/* ACADEMICO */
+
+section.academico{
+    padding: 40px 4%;
+
+}
+
+.academico .img-academico img{
+    width: 500px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+}
+
+section.academico .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.academico .txt-academico{
     color: #fff;
 }
 
-.hardskills .hardskills-box h3{
-    margin: 20px 0px;
+.academico .txt-academico h2{
+    font-size: 40px;
+}
+.academico .interface h2{
+    color: #fff;
+}
+
+section.academico .interface .academico-flex{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 40px;
+}
+
+section.academico .interface .academico-flex img{
+    width: 5%;
+}
+
+section.academico .interface .academico-flex h2{
+    font-size: 40px;
+}
+
+section.academico .interface {
+    justify-content: space-between;
+}
+
+section.academico .img-academico-certificado img{
+    width: 600px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+}
+
+section.academico .certificado-flex{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 69px;
+    margin-top: 40px;
+}
+
+section.academico .certificado-text h2{
+    font-size: 40px;
+}
+
+section.academico .certificado-text p{
+    color: #fff;
+}
+
+section.academico .logo-da-unibra-flex{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 69px;
+    margin-top: 40px;
+}
+
+.academico .unibra-text p{
+    color: #fff;
+}
+
+.academico .unibra-text h2{
+    font-size: 40px;
+}
+
+.academico .unibra-img img{
+    width: 500px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    gap: 60px;
 }
