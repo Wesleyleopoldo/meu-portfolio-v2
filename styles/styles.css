@@ -1,3 +1,17 @@
+:root {
+    --linkedin-color: #0a66c2;
+    --instagram-linear-grad: linear-gradient(45deg,
+    #405DE6, /* azul instagram */
+    #5851DB, /* roxo */
+    #833AB4, /* violeta */
+    #C13584, /* magenta */
+    #E1306C, /* rosa */
+    #FD1D1D, /* vermelho */
+    #F56040, /* laranja */
+    #FCAF45, /* amarelo */
+    #FFDC80  /* amarelo claro */
+  );
+}
 
 /*ESTILO GERAL*/
 *{
@@ -5,6 +19,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
@@ -40,6 +58,10 @@ h2.titulo {
 
 header {
     padding: 40px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background-color: #000;
 }
 
 header > .interface{
@@ -121,13 +143,46 @@ section.topo-do-site .flex{
 }
 
 @keyframes writer {
-    0%{ content: ""; }
-    1%{ content: "DEV BACKEND"; }
-    49%{ content: "";}
-    50%{ content: "ENGENHEIRO DE SOFTWARE";}
-    75%{ content: "UX / UI DESIGNER"; }
-    100%{ content: "UX / UI DESIGNER";}
+  0%   { content: ""; }
+
+  /* === Digita DEV FULL STACK === */
+  2%   { content: "DE"; }
+  4%   { content: "DEV F"; }
+  6%   { content: "DEV FULL"; }
+  8%   { content: "DEV FULL ST"; }
+  10%  { content: "DEV FULL STACK"; }
+
+  /* Pausa visível */
+  30%  { content: "DEV FULL STACK"; }
+
+  /* Apaga */
+  32%  { content: "DEV FULL ST"; }
+  36%  { content: "DEV FULL"; }
+  40%  { content: ""; }
+
+  /* Pausa vazia antes do próximo */
+  50%  { content: ""; }
+
+  /* === Digita ENGENHEIRO DE SOFTWARE === */
+  52%  { content: "ENGEN"; }
+  54%  { content: "ENGENHEIRO"; }
+  56%  { content: "ENGENHEIRO D"; }
+  58%  { content: "ENGENHEIRO DE SO"; }
+  60%  { content: "ENGENHEIRO DE SOFTWARE"; }
+
+  /* Pausa visível */
+  80%  { content: "ENGENHEIRO DE SOFTWARE"; }
+
+  /* Apaga */
+  82%  { content: "ENGENHEIRO DE SOF"; }
+  86%  { content: "ENGENHEIRO"; }
+  90%  { content: ""; }
+
+  /* Pausa vazia antes de recomeçar */
+  100% { content: ""; }
 }
+
+
 
 .topo-do-site .txt-topo-site h1 span::before{
     content: "";
@@ -269,7 +324,7 @@ section.academico .certificado-text p{
     color: #fff;
 }
 
-section.academico .logo-da-unibra-flex{
+section.academico .logo-da-one-flex{
     padding: 50px;
     display: flex;
     justify-content: center;
@@ -278,17 +333,490 @@ section.academico .logo-da-unibra-flex{
     margin-top: 40px;
 }
 
-.academico .unibra-text p{
+.academico .one-text p{
     color: #fff;
 }
 
-.academico .unibra-text h2{
+.academico .one-text h2{
     font-size: 40px;
 }
 
-.academico .unibra-img img{
+.academico .one-img img{
     width: 500px;
     border: 2px solid #fff;
     border-radius: 50px;
     gap: 60px;
+}
+
+
+section.academico .certificado-senac-flex{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 69px;
+    margin-top: 40px;
+}
+
+.academico .senac-text p{
+    color: #fff;
+}
+
+.academico .senac-text h2{
+    font-size: 40px;
+}
+
+.academico .img-certificado-senac img{
+    width: 500px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    gap: 60px;
+}
+
+.projetos{
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 80px 0;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;  
+}
+
+.projetos h2{
+    font-size: 32px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.projetos p{
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-family: italical;
+    color: red;
+}
+
+.projetos-lista{
+    list-style: none;
+    
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.projetos img{
+    text-align: center;
+    justify-content: center;
+    width: 22%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    opacity: 0.8;
+    border-radius: 8px;
+    transition: 0.9s;
+    cursor: pointer;
+}
+
+.projetos img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.action{
+    padding: 12px 28px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #000;
+    border: 0;
+    font-weight: bold;
+    transition: 0.9s;
+    margin-top: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action:hover{
+    transform: scale(1.1);
+    background-color: red;
+    color: white;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+}
+
+.container-popup {
+    background-color: black;
+    width: 485px;
+    height: 285px;
+    display: flex;
+    border-radius: 25px;
+    justify-content: space-between;
+}
+
+.container-popup img {
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid white;
+}
+
+.linkedin, .instagram, .github {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 33.33%;
+    cursor: pointer;
+}
+
+.container-popup a {
+    text-decoration: none;
+    color: white;
+}
+
+.linkedin {
+    padding: 35px;
+    background-color: var(--linkedin-color);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.img-linkedin {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.linkedin:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+.instagram {
+    background: var(--instagram-linear-grad);
+    transition: transform 0.3s;
+    padding: 35px;
+}
+
+.img-instagram {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.instagram:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+.github {
+    background-color: black;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: transform 0.3s;
+    padding: 35px;
+}
+
+.img-git {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.github:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+footer{
+    background-color: #000000;
+    color: #a4a4a4;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+footer:hover{
+    background-color: red;
+    color: #fff;
+    transition: 0.9s;
+}
+
+/* =========================================
+   RESPONSIVIDADE PARA TELAS <= 1050px
+========================================= */
+@media (max-width: 1050px) {
+
+    /* ===== Ajustes gerais ===== */
+    .interface {
+        padding: 0 2%;
+        max-width: 100%;
+    }
+
+    /* ===== Cabeçalho ===== */
+    header {
+        padding: 20px 4%;
+    }
+
+    header .logo img {
+        width: 60px;
+        height: auto;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header > .interface {
+        justify-content: space-around;
+    }
+
+    .btn-contato button {
+        padding: 8px 30px;
+        font-size: 16px;
+    }
+
+    /* ===== Topo do site ===== */
+    section.topo-do-site .flex {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .topo-do-site .txt-topo-site h1 {
+        font-size: 32px;
+        line-height: normal;
+    }
+
+    .topo-do-site .txt-topo-site p {
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+    .topo-do-site .img-topo-site img {
+        max-width: 300px;
+        width: 80%;
+    }
+
+    /* ===== HardSkills ===== */
+    section.hardskills .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hardskills .hardskills-box {
+        padding: 30px;
+        margin-top: 20px;
+    }
+
+    /* ===== Acadêmico ===== */
+    section.academico .flex,
+    section.academico .academico-flex,
+    section.academico .certificado-flex,
+    section.academico .logo-da-one-flex,
+    section.academico .certificado-senac-flex {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    section.academico .flex > div:first-child {
+        order: -1;
+    }
+
+    .academico .txt-academico h2,
+    section.academico .certificado-text h2,
+    .academico .one-text h2,
+    .academico .senac-text h2 {
+        font-size: 32px;
+    }
+
+    .academico .txt-academico p,
+    section.academico .certificado-text p,
+    .academico .one-text p,
+    .academico .senac-text p {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .academico .img-academico img,
+    section.academico .img-academico-certificado img,
+    .academico .one-img img,
+    .academico .img-certificado-senac img {
+        max-width: 100%;
+        width: 90%;
+        height: auto;
+    }
+
+    /* ===== Projetos ===== */
+    .projetos {
+        padding: 40px 0;
+    }
+
+    .projetos-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projetos img {
+        width: 90%;
+        margin: 0 0 20px 0;
+    }
+
+    /* ===== Popup ===== */
+    .container-popup {
+        width: 95%;
+        height: auto;
+        min-height: 250px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .linkedin, .instagram, .github {
+        padding: 15px;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .container-popup img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* ===== Rodapé ===== */
+    footer {
+        padding: 12px 10%;
+    }
+}
+
+/* =========================================
+   RESPONSIVIDADE PARA CELULARES <= 600px
+========================================= */
+@media (max-width: 600px) {
+
+    /* ===== Tipografia ===== */
+    h2.titulo {
+        font-size: 28px;
+    }
+
+    .topo-do-site .txt-topo-site h1 {
+        font-size: 24px;
+    }
+
+    .topo-do-site .txt-topo-site #typing-effect {
+        font-size: 16px;
+    }
+
+    .btn-contato button {
+        padding: 6px 20px;
+        font-size: 14px;
+    }
+
+    /* ===== HardSkills ===== */
+    .hardskills .hardskills-box {
+        padding: 20px;
+    }
+
+    .hardskills .hardskills-box h3 {
+        font-size: 18px;
+    }
+
+    .hardskills .hardskills-box li {
+        font-size: 14px;
+    }
+
+    /* ===== Acadêmico ===== */
+    .academico .txt-academico h2,
+    section.academico .certificado-text h2,
+    .academico .one-text h2,
+    .academico .senac-text h2 {
+        font-size: 22px;
+    }
+
+    .academico .txt-academico p,
+    section.academico .certificado-text p,
+    .academico .one-text p,
+    .academico .senac-text p {
+        font-size: 14px;
+    }
+
+    /* ===== Popup ===== */
+    .container-popup {
+        width: 95%;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .linkedin, .instagram, .github {
+        width: 100%;
+        border-radius: 0 !important;
+        border-top: 1px solid #333;
+    }
+
+    .linkedin {
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+        border-bottom-left-radius: 0 !important;
+    }
+
+    .github {
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+    }
+
+    .container-popup img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .container-popup p {
+        font-size: 14px;
+    }
+
+    /* Overlay padding */
+    .overlay {
+        padding: 10px;
+    }
+
+    /* Topo do site imagens */
+    .topo-do-site .img-topo-site img {
+        width: 70%;
+        max-width: 250px;
+    }
 }
