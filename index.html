@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="shortcut icon" href="./imgs/desenvolvedor.png" type="image/png">
     <title>Wesley Silva</title>
 </head>
+
 <body>
-    
+    <canvas id="matrix-canvas"></canvas>
+
+    <div class="bg-icons">
+        <!-- Kali Linux -->
+        <svg class="bg-icon icon1" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <!-- Metasploit -->
+        <svg class="bg-icon icon2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 16v-4"></path>
+            <path d="M12 8h.01"></path>
+            <path d="M8 12h8"></path>
+        </svg>
+        <!-- Wireshark -->
+        <svg class="bg-icon icon3" viewBox="0 0 24 24">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+        </svg>
+        <!-- Burp Suite -->
+        <svg class="bg-icon icon4" viewBox="0 0 24 24">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <!-- Lock -->
+        <svg class="bg-icon icon5" viewBox="0 0 24 24">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+        <!-- Shield -->
+        <svg class="bg-icon icon6" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+    </div>
+
+
     <header>
         <div class="interface">
             <div class="logo">
                 <a href="#">
-                    <img src="imgs/desenvolvedor.png" alt="Logo do Portfolio" width="100px"">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line x1="12" y1="19" x2="20" y2="19"></line>
+                    </svg>
                 </a>
             </div><!--logotipo-->
 
-            <nav class="menu-desktop">
+            <nav class=" menu-desktop">
                 <ul>
                     <li><a href="#topo-do-site">Início</a></li>
                     <li><a href="#hardskills">HardSkills</a></li>
@@ -35,141 +79,197 @@
     </header>
 
     <main>
-    
-    <section id="topo-do-site" class="topo-do-site">
-        <div class="interface">
-            <div class="flex">
-                <div class="txt-topo-site">
-                    <h1>OLÁ EU SOU WESLEY SILVA <br>SOU <span></span></h1>
-                    <p id="typing-effect">Olá!! Meu nome é Wesley Silva tenho 20 anos e moro em Pernambuco. Sou estudante de Desenvolvimento de Sistemas desde 2024 onde comecei na ETE Advogado José David Gil Rodrigues, onde tudo começou. Nunca havia ouvido falar na aréa de desenvolvimento e sinceramente achei que fosse a mesma coisa de apenas formatar computador, hoje na aréa vejo que é muito além de fazer apenas isso... É transformar soluções em códigos!!!</p>
 
-                    <div class="btn-contato">
-                        <a href="https://wa.me/5581987563298?text=Olá%2C%20vi%20seus%20projetos%20online%20e%20gostaria%20de%20conversar%20sobre%20possíveis%20oportunidades.">
-                            <button>Entre em Contato</button>
-                        </a>
+        <section id="topo-do-site" class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>SISTEMA ACESSADO, BEM-VINDO<br>SOU WESLEY SILVA <span></span></h1>
+                        <p id="typing-effect">Profissional focado em Cybersecurity e
+                            Desenvolvimento de Sistemas. Desde 2024, atuo na construção de soluções tecnológicas seguras
+                            e estruturadas.</p>
+                        <div class="btn-contato">
+                            <a
+                                href="https://wa.me/5581987563298?text=Olá%2C%20vi%20seus%20projetos%20online%20e%20gostaria%20de%20conversar%20sobre%20possíveis%20oportunidades.">
+                                <button>Entre em Contato</button>
+                            </a>
+                        </div>
+                    </div><!--txt-topo-site-->
+
+                    <div class="img-topo-site"
+                        onclick="window.open('https://www.linkedin.com/in/wesley-silva-a07878300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank')">
+                        <img src="imgs/foto-com-bracos-cruzados2.png" alt="Minha foto no ínicio">
+                    </div><!--img-topo-site-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--topo-do-site-->
+
+        <section id="hardskills" class="hardskills">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>HARDSKILLS</span></h2>
+                <div class="flex">
+                    <div class="hardskills-box">
+                        <h3>BACKEND COM JAVA:</h3>
+                        <ul>
+                            <li>SpringBoot Framework</li>
+                            <li>Spring DataJpa</li>
+                            <li>H2 Database</li>
+                            <li>Flyaway Migration</li>
+                            <li>Spring Security</li>
+                            <li>APIs RestFull</li>
+                            <li>Bancos de Dados Relacionais</li>
+                        </ul>
                     </div>
-                </div><!--txt-topo-site-->
 
-                <div class="img-topo-site" onclick="window.open('https://www.linkedin.com/in/wesley-silva-a07878300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank')">
-                    <img src="imgs/foto-com-bracos-cruzados2.jpeg" alt="Minha foto no ínicio">
-                </div><!--img-topo-site-->
-            </div><!--flex-->
-        </div><!--interface-->
-    </section><!--topo-do-site-->
+                    <div class="hardskills-box">
+                        <h3>FRONTEND:</h3>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>UX / UI Design</li>
+                            <li>Figma Prototyping</li>
+                            <li>ReactJS</li>
+                            <li>React Native</li>
+                        </ul>
+                    </div><!--hardskills-box-->
 
-    <section id="hardskills" class="hardskills">
-        <div class="interface">
-            <h2 class="titulo">MINHAS <span>HARDSKILLS</span></h2>
-            <div class="flex">
-                <div class="hardskills-box">
-                    <h3>BACKEND COM JAVA:</h3>
-                    <ul>
-                        <li>SpringBoot Framework - intermediário</li>
-                        <li>Spring DataJpa - intermediário</li>
-                        <li>h2 Database - intermediário</li>
-                        <li>Flyaway migration - intermediário</li>
-                        <li>Spring Security - iniciante</li>
-                        <li>APIs RestFull - básico</li>
-                        <li>Bancos de Dados - básico</li>
-                    </ul>
+                    <div class="hardskills-box" id="cyber-tools">
+                        <h3>CYBERSECURITY & TOOLS:</h3>
+                        <div class="tools-grid">
+                            <div class="tool-item">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span>Kali Linux</span>
+                            </div>
+                            <div class="tool-item">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 16v-4"></path>
+                                    <path d="M12 8h.01"></path>
+                                    <path d="M8 12h8"></path>
+                                </svg>
+                                <span>Metasploit</span>
+                            </div>
+                            <div class="tool-item">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                                <span>Burp Suite</span>
+                            </div>
+                            <div class="tool-item">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                                <span>Wireshark</span>
+                            </div>
+                            <div class="tool-item">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                                <span>OWASP Top 10</span>
+                            </div>
+                        </div>
+                    </div><!--hardskills-box-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section> <!--hardskills-->
+
+        <section id="academico" class="academico">
+            <div class="interface">
+                <div class="academico-flex">
+                    <img src="imgs/graduacao.png" alt="">
+                    <h2>ACADÊMICO</h2>
+                </div>
+                <div class="certificado-flex">
+                    <div class="img-academico">
+                        <img src="imgs/foto-com-equipe-ete.jpeg" alt="Foto com a Equipe">
+                    </div><!--img-academico-->
+
+                    <div class="txt-academico">
+                        <h2>ETE ADVOGADO JOSÉ DAVID GIL RODRIGUES <br>05/02/2024</h2>
+
+                        <p>Início da minha trajetória acadêmica e profissional na área de tecnologia, na qual fui
+                            aprovado no processo seletivo em primeiro lugar. Desde então, desenvolvo uma base sólida em
+                            sistemas e infraestrutura.</p>
+                        <p>Atualmente, direciono minha carreira de forma incisiva para a cibersegurança e engenharia de
+                            software. O estudo contínuo de vulnerabilidades, arquitetura de redes e desenvolvimento
+                            seguro me capacita a projetar sistemas não apenas funcionais, mas protegidos contra as
+                            ameaças do cenário digital moderno.</p>
+                    </div>
+                </div><!--flex-->
+                <div class="certificado-flex">
+                    <div class="certificado-text">
+                        <h2>DIGITAL INNOVATION ONE (DIO) <br>01/04/2024</h2>
+                        <p>Especialização focada no desenvolvimento Backend utilizando Java. Aprofundamento em conceitos
+                            de tipagem forte e orientação a objetos para criar arquiteturas de software escaláveis,
+                            sustentáveis e resilientes a falhas.</p>
+                        <p>A trilha incluiu conhecimentos complementares em Python e JavaScript, enfatizando a
+                            importância crítica dos testes unitários (TDD) para assegurar a integridade do código e
+                            mitigar potenciais vulnerabilidades exploráveis nas aplicações.</p>
+                    </div>
+
+                    <div class="img-academico-certificado">
+                        <img src="imgs/certificado.png" alt="Imagem do meu certificado">
+                    </div>
                 </div>
 
-                <div class="hardskills-box">
-                    <h3>FRONTEND:</h3>
-                    <ul>
-                        <li>HTML - intermediário</li>
-                        <li>CSS - básico</li>
-                        <li> JavaScript - básico</li>
-                        <li>UX / UI Designer - básico</li>
-                        <li>Figma Software - básico</li>
-                        <li>Reactjs - básico</li>
-                        <li>React-Native - básico</li>
-                    </ul>
-                </div><!--hardskills-box-->
+                <div class="logo-da-one-flex">
+                    <div class="one-img">
+                        <img src="imgs/formacao-no-one.jpeg" alt="">
+                    </div>
 
-                <div class="hardskills-box">
-                    <h3>Banco de Dados:</h3>
-                    <ul>
-                        <li>Postgresql - básico</li>
-                        <li>MySQL - básico</li>
-                        <li>MongoDB - básico</li>
-                        <li>H2 DataBase - básico</li>
-                    </ul>
-                </div><!--hardskills-box-->
-            </div><!--flex-->
-        </div><!--interface-->
-    </section> <!--hardskills-->
-
-    <section id="academico" class="academico">
-        <div class="interface">
-            <div class="academico-flex">
-                <img src="imgs/graduacao.png" alt="">
-                <h2>ACADÊMICO</h2>
-            </div>
-            <div class="flex">
-                <div class="img-academico">
-                    <img src="imgs/foto-com-equipe-ete.jpeg" alt="Foto com a Equipe">
-                </div><!--img-academico-->
-
-                <div class="txt-academico">
-                    <h2>ETE ADVOGADO JOSÉ DAVID GIL RODRIGUES <br><span>05/02/2024</span></h2>
-
-                    <p>Inicio da minha trajetória na aréa da tecnologia onde fui aprovado no processo seletivo em primeiro lugar, desde então venho me empenhando nesse vasto mundo que é a tecnologia da informação.</p>
-                    <p>  Hoje sou um entusiasta em cybersegurança e engenharia de software, apesar de ainda não ter concluído uma faculdade ou ter uma graduação, venho me esforçando e dando o meu melhor para ser um profissional tão bom quanto aqueles que tem graduação.</p>
-                </div>
-            </div><!--flex-->
-            <div class="certificado-flex">
-                <div class="certificado-text">
-                    <h2>DIGITAL INNOVATION ONE(DIO) <br>01/04/2024</h2>
-                    <p>Iniciei meus estudos de Java pela DIO e aprendi muito sobre essa linguagem tão utilizada no mundo corporativo!!! Vi como sua sintaxe fortemente tipada pode contribuir para um sistema legível e de fácil escalabilidade e manutenção, pretendo conhecer cada vez mais sobre ela e me aperfeiçoar para me tornar um Dev Java completo!!</p>
-                    <p>Não só estudei Java na DIO como também aprendi muito sobre Python e JavaScript, vi como testes unitários podem garantir a qualidade de um software e ajudar no desenvolvimento e na manutenção do sistema. E sigo com tudo para me tornar um especialista na aréa!!!</p>
+                    <div class="one-text">
+                        <h2>ORACLE NEXT EDUCATION - ONE <br>19/08/2024</h2>
+                        <p>Formação intensiva financiada pela Oracle em parceria com a Alura. O programa abordou as
+                            melhores práticas do mercado corporativo, consolidando minhas habilidades essenciais em
+                            desenvolvimento de software e infraestrutura.</p>
+                        <p>Além da proficiência em stacks Frontend e Backend, o curso reforçou a vivência prática com o
+                            ecossistema Linux. A administração de servidores, o manuseio avançado de terminais e a
+                            aplicação ágil do conhecimento constituem hoje a espinha dorsal de minha metodologia de
+                            trabalho.</p>
+                    </div>
                 </div>
 
-                <div class="img-academico-certificado">
-                    <img src="imgs/certificado.png" alt="Imagem do meu certificado">
-                </div>
-            </div>
-            
-            <div class="logo-da-one-flex">
-                <div class="one-img">
-                    <img src="imgs/formacao-no-one.jpeg" alt="">
-                </div>
+                <div class="certificado-senac-flex">
+                    <div class="senac-text">
+                        <h2>SERASA EXPERIAN - SENAC <br>20/05/2025</h2>
+                        <p>Formação como Programador de Sistemas pelo Senac, integrado ao renomado programa da Serasa
+                            Experian. Um treinamento de alto nível técnico voltado para os rigorosos padrões do mercado
+                            financeiro e de proteção de dados.</p>
+                        <p>Orientado por engenheiros de software seniores, o foco metodológico é a excelência: escrever
+                            código performático, realizar análises rigorosas de segurança (Secure Coding) e estar
+                            plenamente engajado no modelo de produção de grandes empresas de tecnologia.</p>
+                    </div>
 
-                <div class="one-text">
-                    <h2>ORACLE NEXT EDUCATION - ONE <br>19/08/2024</h2>
-                    <p>Me formei no ONE que é um programa sensacional da gigante Oracle!! Foi uma experiência incrível estudar nesse programa da Oracle em parceria com a Alura, foi um tempo de qualidade investido bem. Aulas muito intuitivas e profissionais com uma didática incrível!</p>
-                    <p>Aprendi bastante sobre frontend e backend. Aprimorei meus conhecimentos em Java e de quebra aprendi a como um profissional da aréa tem que se comportar e ser dinâmico. O famoso linux!! Se colocar roda vira carro, se joga pra cima vira avião!!</p>
+                    <div class="img-certificado-senac">
+                        <img src="./imgs/certificado-senac.jpeg" alt="">
+                    </div>
                 </div>
-            </div>
+            </div><!--interface-->
+        </section><!--academico-->
 
-            <div class="certificado-senac-flex">
-                <div class="senac-text">
-                    <h2>SERASA EXPERIAN - SENAC <br>20/05/2025</h2>
-                    <p>Iniciei minha formação em programador de sistemas pelo Senac no programa da Serasa Experian que está sendo incrível assim como em todas instituições onde cursei tecnologia da informação.</p>
-                    <p>Tem sido incrível fazer parte dessa edição do Serasa Experia, temos professores qualificados e bastante competentes, profissionais que trabalharam em grandes empresas e que nos instruem de forma a que não apenas passemos e ganhemos mais um certificado, mas sim para que realmente estejamos prontos para o mercado.</p>
-                </div>
-
-                <div class="img-certificado-senac">
-                    <img src="./imgs/certificado-senac.jpeg" alt="">
-                </div>
-            </div>
-        </div><!--interface-->
-    </section><!--academico-->
-
-    <section id="projetos" class="projetos">
+        <section id="projetos" class="projetos">
             <h2>Projetos</h2>
-            <p>Olhe meus projetos </p>
+            <p>Olhe meus projetos</p>
             <div class="projetos-lista">
-                <img src="./imgs/artebryndes.png" alt="">
-                <img src="./imgs/tela-de-login.jpeg" alt="">
-                <img src="./imgs/check-list-seg.jpeg" alt="">
+                <img src="./imgs/artebryndes.png" alt="Projeto Arte Bryndes">
+                <img src="./imgs/tela-de-login.jpeg" alt="Projeto Tela de Login">
+                <img src="./imgs/check-list-seg.jpeg" alt="Projeto Check List Seg">
             </div>
-             <div class="projetos-lista">
-                <img src="./imgs/homepage-sus.png" alt="">
-                <img src="./imgs/login-sus.png" alt="">
-                <img src="./imgs/site-setembro-amarelo.png" alt="">
+            <div class="projetos-lista">
+                <img src="./imgs/homepage-sus.png" alt="Projeto Homepage SUS">
+                <img src="./imgs/login-sus.png" alt="Projeto Login SUS">
+                <img src="./imgs/site-setembro-amarelo.png" alt="Projeto Setembro Amarelo">
             </div>
-
             <a href="#topo-do-site"><button class="action">Fale comigo!</button> </a>
         </section>
 
@@ -177,16 +277,19 @@
         <div class="overlay" id="overlay">
             <button class="close-btn" onclick="closePopUp()">x</button>
             <div class="container-popup">
-                <div class="linkedin" onclick="window.open('https://www.linkedin.com/in/wesley-silva-a07878300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank')">
+                <div class="linkedin"
+                    onclick="window.open('https://www.linkedin.com/in/wesley-silva-a07878300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank')">
                     <div class="img-linkedin">
-                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHPsa9XYTDBhg/profile-displayphoto-scale_200_200/B4EZhJy8kEHEAY-/0/1753584750010?e=2147483647&v=beta&t=rqiDzkp0N10X4ZpCyDL3FJSDcY8xD3rQrR39aDVb8rs" alt="Foto de perfil">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHPsa9XYTDBhg/profile-displayphoto-scale_200_200/B4EZhJy8kEHEAY-/0/1753584750010?e=2147483647&v=beta&t=rqiDzkp0N10X4ZpCyDL3FJSDcY8xD3rQrR39aDVb8rs"
+                            alt="Foto de perfil">
                     </div>
                     <p><a href="">LinkedIn</a></p>
                 </div>
 
                 <div class="instagram" onclick="window.open('https://www.instagram.com/wesleyleopoldo_/', '_blank')">
                     <div class="img-instagram">
-                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHPsa9XYTDBhg/profile-displayphoto-scale_200_200/B4EZhJy8kEHEAY-/0/1753584750010?e=2147483647&v=beta&t=rqiDzkp0N10X4ZpCyDL3FJSDcY8xD3rQrR39aDVb8rs" alt="Foto de perfil">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHPsa9XYTDBhg/profile-displayphoto-scale_200_200/B4EZhJy8kEHEAY-/0/1753584750010?e=2147483647&v=beta&t=rqiDzkp0N10X4ZpCyDL3FJSDcY8xD3rQrR39aDVb8rs"
+                            alt="Foto de perfil">
                     </div>
                     <p><a href="">Instagram</a></p>
                 </div>
@@ -207,4 +310,5 @@
         <script src="./js/script.js"></script>
     </main>
 </body>
+
 </html>
