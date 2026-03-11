@@ -4,15 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de Wesley Silva — Desenvolvedor Full Stack e especialista em Cybersecurity.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <link rel="shortcut icon" href="./imgs/desenvolvedor.png" type="image/png">
     <title>Wesley Silva</title>
 </head>
 
 <body>
+    <!-- Hacking Intro Overlay -->
+    <div id="hack-overlay">
+        <div id="hack-scanline"></div>
+        <div id="hack-terminal">
+            <div id="hack-output"></div>
+            <div id="hack-access" class="hidden">
+                <span class="glitch" data-text="SISTEMA ACESSADO">SISTEMA ACESSADO</span>
+                <p class="access-sub">Bem-vindo, Usuário</p>
+            </div>
+        </div>
+    </div>
+
     <canvas id="matrix-canvas"></canvas>
 
     <div class="bg-icons">
@@ -61,16 +75,23 @@
                 </a>
             </div><!--logotipo-->
 
-            <nav class=" menu-desktop">
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu-desktop" id="nav-menu">
                 <ul>
-                    <li><a href="#topo-do-site">Início</a></li>
-                    <li><a href="#hardskills">HardSkills</a></li>
-                    <li><a href="#academico">Acadêmico</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#topo-do-site" onclick="closeMobileMenu()">Início</a></li>
+                    <li><a href="#hardskills" onclick="closeMobileMenu()">HardSkills</a></li>
+                    <li><a href="#academico" onclick="closeMobileMenu()">Acadêmico</a></li>
+                    <li><a href="#projetos" onclick="closeMobileMenu()">Projetos</a></li>
                 </ul>
             </nav>
 
-            <div class="btn-contato">
+            <div class="btn-contato btn-contato-header">
                 <a href="#">
                     <button onclick="openPopUp()">Contatos</button>
                 </a>
@@ -83,7 +104,7 @@
         <section id="topo-do-site" class="topo-do-site">
             <div class="interface">
                 <div class="flex">
-                    <div class="txt-topo-site">
+                    <div class="txt-topo-site reveal">
                         <h1>SISTEMA ACESSADO, BEM-VINDO<br>SOU WESLEY SILVA <span></span></h1>
                         <p id="typing-effect">Profissional focado em Cybersecurity e
                             Desenvolvimento de Sistemas. Desde 2024, atuo na construção de soluções tecnológicas seguras
@@ -96,7 +117,7 @@
                         </div>
                     </div><!--txt-topo-site-->
 
-                    <div class="img-topo-site"
+                    <div class="img-topo-site reveal reveal-right"
                         onclick="window.open('https://www.linkedin.com/in/wesley-silva-a07878300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank')">
                         <img src="imgs/foto-com-bracos-cruzados2.png" alt="Minha foto no ínicio">
                     </div><!--img-topo-site-->
@@ -106,9 +127,9 @@
 
         <section id="hardskills" class="hardskills">
             <div class="interface">
-                <h2 class="titulo">MINHAS <span>HARDSKILLS</span></h2>
+                <h2 class="titulo reveal">MINHAS <span>HARDSKILLS</span></h2>
                 <div class="flex">
-                    <div class="hardskills-box">
+                    <div class="hardskills-box reveal reveal-up" style="--reveal-delay: 0.1s">
                         <h3>BACKEND COM JAVA:</h3>
                         <ul>
                             <li>SpringBoot Framework</li>
@@ -121,7 +142,7 @@
                         </ul>
                     </div>
 
-                    <div class="hardskills-box">
+                    <div class="hardskills-box reveal reveal-up" style="--reveal-delay: 0.25s">
                         <h3>FRONTEND:</h3>
                         <ul>
                             <li>HTML5 & CSS3</li>
@@ -133,49 +154,47 @@
                         </ul>
                     </div><!--hardskills-box-->
 
-                    <div class="hardskills-box" id="cyber-tools">
+                    <div class="hardskills-box reveal reveal-up" id="cyber-tools" style="--reveal-delay: 0.4s">
                         <h3>CYBERSECURITY & TOOLS:</h3>
                         <div class="tools-grid">
                             <div class="tool-item">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                </svg>
+                                <img src="https://cdn.simpleicons.org/kalilinux/00ff00" alt="Kali Linux" width="40"
+                                    height="40" class="tool-logo">
                                 <span>Kali Linux</span>
                             </div>
                             <div class="tool-item">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <path d="M12 16v-4"></path>
-                                    <path d="M12 8h.01"></path>
-                                    <path d="M8 12h8"></path>
-                                </svg>
+                                <img src="https://cdn.simpleicons.org/metasploit/00ff00" alt="Metasploit" width="40"
+                                    height="40" class="tool-logo">
                                 <span>Metasploit</span>
                             </div>
                             <div class="tool-item">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                    <polyline points="2 17 12 22 22 17"></polyline>
-                                    <polyline points="2 12 12 17 22 12"></polyline>
-                                </svg>
+                                <img src="https://cdn.simpleicons.org/portswigger/00ff00" alt="Burp Suite" width="40"
+                                    height="40" class="tool-logo">
                                 <span>Burp Suite</span>
                             </div>
                             <div class="tool-item">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                                </svg>
+                                <img src="https://cdn.simpleicons.org/wireshark/00ff00" alt="Wireshark" width="40"
+                                    height="40" class="tool-logo">
                                 <span>Wireshark</span>
                             </div>
                             <div class="tool-item">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--neon-green)"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                </svg>
+                                <img src="https://cdn.simpleicons.org/owasp/00ff00" alt="OWASP" width="40" height="40"
+                                    class="tool-logo">
                                 <span>OWASP Top 10</span>
+                            </div>
+                            <div class="tool-item">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff00"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                    class="tool-logo-svg">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                    <line x1="12" y1="2" x2="12" y2="6"></line>
+                                    <line x1="12" y1="18" x2="12" y2="22"></line>
+                                    <line x1="2" y1="12" x2="6" y2="12"></line>
+                                    <line x1="18" y1="12" x2="22" y2="12"></line>
+                                </svg>
+                                <span>Nmap</span>
                             </div>
                         </div>
                     </div><!--hardskills-box-->
@@ -185,11 +204,11 @@
 
         <section id="academico" class="academico">
             <div class="interface">
-                <div class="academico-flex">
+                <div class="academico-flex reveal">
                     <img src="imgs/graduacao.png" alt="">
                     <h2>ACADÊMICO</h2>
                 </div>
-                <div class="certificado-flex">
+                <div class="certificado-flex reveal reveal-left">
                     <div class="img-academico">
                         <img src="imgs/foto-com-equipe-ete.jpeg" alt="Foto com a Equipe">
                     </div><!--img-academico-->
@@ -206,7 +225,7 @@
                             ameaças do cenário digital moderno.</p>
                     </div>
                 </div><!--flex-->
-                <div class="certificado-flex">
+                <div class="certificado-flex reveal reveal-right">
                     <div class="certificado-text">
                         <h2>DIGITAL INNOVATION ONE (DIO) <br>01/04/2024</h2>
                         <p>Especialização focada no desenvolvimento Backend utilizando Java. Aprofundamento em conceitos
@@ -222,7 +241,7 @@
                     </div>
                 </div>
 
-                <div class="logo-da-one-flex">
+                <div class="logo-da-one-flex reveal reveal-left">
                     <div class="one-img">
                         <img src="imgs/formacao-no-one.jpeg" alt="">
                     </div>
@@ -239,7 +258,7 @@
                     </div>
                 </div>
 
-                <div class="certificado-senac-flex">
+                <div class="certificado-senac-flex reveal reveal-right">
                     <div class="senac-text">
                         <h2>SERASA EXPERIAN - SENAC <br>20/05/2025</h2>
                         <p>Formação como Programador de Sistemas pelo Senac, integrado ao renomado programa da Serasa
@@ -258,17 +277,23 @@
         </section><!--academico-->
 
         <section id="projetos" class="projetos">
-            <h2>Projetos</h2>
-            <p>Olhe meus projetos</p>
+            <h2 class="reveal">Projetos</h2>
+            <p class="reveal">Olhe meus projetos</p>
             <div class="projetos-lista">
-                <img src="./imgs/artebryndes.png" alt="Projeto Arte Bryndes">
-                <img src="./imgs/tela-de-login.jpeg" alt="Projeto Tela de Login">
-                <img src="./imgs/check-list-seg.jpeg" alt="Projeto Check List Seg">
+                <img class="reveal reveal-up" style="--reveal-delay: 0.1s" src="./imgs/artebryndes.png"
+                    alt="Projeto Arte Bryndes">
+                <img class="reveal reveal-up" style="--reveal-delay: 0.2s" src="./imgs/tela-de-login.jpeg"
+                    alt="Projeto Tela de Login">
+                <img class="reveal reveal-up" style="--reveal-delay: 0.3s" src="./imgs/check-list-seg.jpeg"
+                    alt="Projeto Check List Seg">
             </div>
             <div class="projetos-lista">
-                <img src="./imgs/homepage-sus.png" alt="Projeto Homepage SUS">
-                <img src="./imgs/login-sus.png" alt="Projeto Login SUS">
-                <img src="./imgs/site-setembro-amarelo.png" alt="Projeto Setembro Amarelo">
+                <img class="reveal reveal-up" style="--reveal-delay: 0.15s" src="./imgs/homepage-sus.png"
+                    alt="Projeto Homepage SUS">
+                <img class="reveal reveal-up" style="--reveal-delay: 0.25s" src="./imgs/login-sus.png"
+                    alt="Projeto Login SUS">
+                <img class="reveal reveal-up" style="--reveal-delay: 0.35s" src="./imgs/site-setembro-amarelo.png"
+                    alt="Projeto Setembro Amarelo">
             </div>
             <a href="#topo-do-site"><button class="action">Fale comigo!</button> </a>
         </section>
